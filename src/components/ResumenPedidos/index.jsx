@@ -1,6 +1,5 @@
 import React from 'react';
 import { ProductoBadge } from '../ProductoBadge';
-import { ProductoList } from '../ProductoList';
 
 const ResumenPedidos = ({ order }) => {
   const productos = resumirProductos(order);
@@ -8,8 +7,6 @@ const ResumenPedidos = ({ order }) => {
   return (
     <div role="alert" className={`alert ${order.find((e) => e.modifique) ? 'alert-danger' : 'alert-success'}`}>
       {Object.keys(productos).map((key) => {
-        console.log("🚀 ~ Object.keys ~ productos[key]:", productos[key])
-
         return (
           <ProductoBadge key={key} {...productos[key]} />
         )

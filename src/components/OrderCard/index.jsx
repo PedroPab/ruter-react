@@ -2,6 +2,7 @@
 import { Card, CardBody, CardSubtitle } from 'react-bootstrap';
 import { CardHeader } from '../CardHeader';
 import { ResumenProductos } from '../ResumenProductos';
+import { ProductoList } from '../ProductoList';
 
 
 
@@ -29,9 +30,13 @@ const OrderCard = ({
         </CardSubtitle>
 
 
-        {/* lita de productos */}
+        {/* lita de resmen de productos */}
         <ResumenProductos
           listProducts={dataPedido.order}
+        />
+        {/*resumen de pruductos  */}
+        <ProductoList
+          productos={dataPedido.order}
         />
 
       </CardBody>
