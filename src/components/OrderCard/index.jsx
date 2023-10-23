@@ -1,16 +1,16 @@
 // OrderCard.js
-import { Card, CardBody, CardSubtitle } from 'react-bootstrap';
+import { Card, CardBody, CardSubtitle, CardFooter } from 'react-bootstrap';
 import { CardHeader } from '../CardHeader';
 import { ResumenProductos } from '../ResumenProductos';
 import { ProductoList } from '../ProductoList';
 import { TotalPrecio } from '../TotalPrecio';
-
+import React from 'react';
+import { ListButtonModalPedido } from '../ListButtonModalPedido';
 
 
 const OrderCard = ({
   dataPedido
 }) => {
-  console.log("🚀 ~ file: index.jsx:14 ~ dataPedido:", dataPedido.priceTotal)
   return (
     <Card
       style={{
@@ -30,8 +30,6 @@ const OrderCard = ({
         <CardSubtitle>
           {dataPedido.address.address_complete}
         </CardSubtitle>
-
-
         {/* lita de resmen de productos */}
         <ResumenProductos
           listProducts={dataPedido.order}
@@ -46,7 +44,9 @@ const OrderCard = ({
           totalPrecio={dataPedido.priceTotal.COP}
           fee={dataPedido.fee}
         />
-
+        <CardFooter>
+          <ListButtonModalPedido dataPedido={dataPedido} />
+        </CardFooter>
       </CardBody>
     </Card>
   );

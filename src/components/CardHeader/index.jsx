@@ -18,10 +18,10 @@ const CardHeader = ({ title, orden, horaCreate, horaPronostico, urlMap, urlPhone
 
         <CardTitle>{title}</CardTitle>
         <ButtonGroup aria-label="Basic example">
-          <Button variant="outline-success" href={urlMap}>
+          <Button size="sm" variant="outline-success" href={urlMap}>
             <SlCallOut />
           </Button>
-          <Button variant="outline-primary" href={urlPhone}>
+          <Button size="sm" variant="outline-primary" href={urlPhone}>
             <BiMap />
           </Button>
         </ButtonGroup>
