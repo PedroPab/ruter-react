@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 
-import { ModalPedido } from '../ModalPedido';
+import { ModalMasPedido } from '../ModalMasPedido';
 import React from 'react';
 
 const BotonMasModal = ({ dataPedido }) => {
@@ -10,9 +10,9 @@ const BotonMasModal = ({ dataPedido }) => {
   const handleCloseModal = () => setShowModal(false);
   return (
     <>
-      <Button size="" variant="outline-secondary" onClick={handleShowModal}>Accion</Button>
+      <Button size="" variant="outline-secondary" onClick={handleShowModal}>Mas</Button>
 
-      <ModalPedido
+      <ModalMasPedido
         show={showModal}
         handleClose={handleCloseModal}
         data={dataPedido}
