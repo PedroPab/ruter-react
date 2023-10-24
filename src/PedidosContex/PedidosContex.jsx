@@ -5,8 +5,8 @@ import { pedidos } from '../utils/pedidos';
 const PedidosContext = React.createContext()
 
 // Creamos un componente proveedor que envuelve la aplicación
-const PedidoProvider = ({ children }) => {
-  const { pedidos: pedidosIniciales, agregarPedido } = pedidos()
+const PedidoProvider = async ({ children }) => {
+  const { pedidos: pedidosIniciales, agregarPedido } = await pedidos()
 
 
   return (
